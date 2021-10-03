@@ -37,7 +37,6 @@ export function Notificationpage() {
   }, [tokenval]);
   return (
     <div>
-      <h1>This is notification page.</h1>
       <div className="list-group">
         {state.map((x) => {
           return (

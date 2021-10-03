@@ -32,7 +32,6 @@ export function Userposts(params) {
 
   return (
     <>
-      <h1>Userposts</h1>
       <div className="d-flex justify-content-center align-items-center flex-column">
         {posts.map((x) => {
           return (

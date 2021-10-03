@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 export function Composepage() {
   return (
     <div>
-      <h1>This is compose page.</h1>
       <Postform />
       <ToastContainer
         position="top-right"

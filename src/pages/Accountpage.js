@@ -15,7 +15,6 @@ export function Accountpage() {
 
   return (
     <div>
-      <h1>This is account page.</h1>
       {token !== "null" && token && <Account state={state} />}
       {token === "null" && (
         <>

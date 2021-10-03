@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 export function Feedpage() {
   return (
     <div>
-      <h1>This is feed page.</h1>
       <Posts />
       {/* <Link
         style={{ position: "fixed", bottom: "0", right: "0", margin: "2rem" }}

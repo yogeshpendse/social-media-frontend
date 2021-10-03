@@ -34,16 +34,6 @@ export function Posts(params) {
   // console.log({ userposts });
   return (
     <>
-      <hr />
-      <button
-        onClick={() => {
-          localStorage.removeItem("token");
-          window.location.reload();
-        }}
-      >
-        removetoken
-      </button>
-      {/* <h1>Token : {tokenval}</h1> */}
       <div className="d-flex justify-content-center align-items-center flex-column">
         {userposts.map((x) => {
           return (
