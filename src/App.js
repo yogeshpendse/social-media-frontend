@@ -15,7 +15,7 @@ function Doesntexist() {
 }
 function App() {
   return (
-    <div className="App">
+    <div className="App custom-background vh-100">
       <Topnavbar />
       <Routes>
         <Route exact path="/" element={<Feedpage />} />

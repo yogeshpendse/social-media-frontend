@@ -40,7 +40,11 @@ export function Likesmodal(params) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{likeusers.length} Likes</Modal.Title>
+          <Modal.Title>
+            <span className="font-family-sans-serif">
+              {likeusers.length} likes
+            </span>
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ListGroup>
@@ -50,7 +54,10 @@ export function Likesmodal(params) {
               <>
                 {likeusers.map((x) => (
                   <ListGroup.Item key={x.userid}>
-                    <Link to={`/${x.username}`}>
+                    <Link
+                      to={`/${x.username}`}
+                      className="text-decoration-none font-family-sans-serif"
+                    >
                       <span className="text-decoration-none text-dark">
                         {x.name}
                         <span className="text-secondary">@{x.username}</span>
@@ -63,8 +70,8 @@ export function Likesmodal(params) {
           </ListGroup>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+          <Button variant="primary" onClick={handleClose}>
+            <span className="font-family-sans-serif">close</span>
           </Button>
         </Modal.Footer>
       </Modal>

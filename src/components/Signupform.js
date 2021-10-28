@@ -17,7 +17,7 @@ export function Signupform() {
     <>
       <form
         onSubmit={onSubmit}
-        className="d-flex justify-content-center align-items-center flex-column"
+        className="d-flex justify-content-center align-items-center flex-column gap-3"
       >
         <br />
         <br />
@@ -27,6 +27,7 @@ export function Signupform() {
           placeholder="name"
           type="text"
           required={true}
+          className="border border-none rounded-3 text-center"
         />
         <input
           value={username}
@@ -34,6 +35,7 @@ export function Signupform() {
           placeholder="username"
           required={true}
           type="text"
+          className="border border-none rounded-3 text-center"
         />
         <input
           value={password}
@@ -41,13 +43,14 @@ export function Signupform() {
           placeholder="password"
           required={true}
           type="password"
+          className="border border-none rounded-3 text-center"
         />
         <button
           className="btn btn-primary btn-sm"
           type="submit"
           disabled={!checkdata(username, password, name)}
         >
-          submit
+          signup
         </button>
       </form>
     </>

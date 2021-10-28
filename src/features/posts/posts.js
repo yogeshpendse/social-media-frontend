@@ -37,7 +37,7 @@ export function Posts(params) {
       <div className="d-flex justify-content-center align-items-center flex-column">
         {userposts.map((x) => {
           return (
-            <div key={x._id} className="card w-50 mt-2">
+            <div key={x._id} className="card post-width mt-2 border rounded">
               <div className="card-body">
                 <h5 className="card-title">
                   <Link
@@ -50,27 +50,26 @@ export function Posts(params) {
                 </h5>
                 <Link
                   to={`/post/${x.creator + "_" + JSON.stringify(x.postid)}`}
-                  className="text-decoration-none"
+                  className="text-decoration-none mb-2"
                 >
                   <p className="card-text text-dark">{x.content}</p>
                 </Link>
-                <br />
                 <button
                   onClick={() =>
                     clikcer({ creator: x.creator, postid: x.postid, tokenval })
                   }
-                  className="btn btn-primary btn-sm"
+                  className="btn btn-sm"
                 >
-                  <i className="bi bi-heart-fill"></i>
+                  <i className="bi bi-heart"></i>
                 </button>
                 &nbsp;&nbsp;&nbsp;
                 <button
                   onClick={() =>
                     clikcer2({ creator: x.creator, postid: x.postid, tokenval })
                   }
-                  className="btn btn-primary btn-sm"
+                  className="btn btn-sm"
                 >
-                  <i className="bi bi-person-lines-fill"></i>
+                  <i className="bi bi-person"></i>
                 </button>
               </div>
             </div>

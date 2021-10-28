@@ -36,11 +36,15 @@ export function Notificationpage() {
     // console.log({ response: response });
   }, [tokenval]);
   return (
-    <div>
-      <div className="list-group">
+    <div className="d-flex justify-content-center mt-3">
+      <div className="list-group notification-width">
         {state.map((x) => {
           return (
-            <Link key={x._id} to={`/post/${x.creator + "_" + x.postid}`}>
+            <Link
+              className="text-decoration-none"
+              key={x._id}
+              to={`/post/${x.creator + "_" + x.postid}`}
+            >
               <span className="list-group-item list-group-item-action">
                 <div className="d-flex w-100 justify-content-between">
                   {x.type === "like" && (

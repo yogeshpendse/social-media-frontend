@@ -6,6 +6,7 @@ import { postPostAsync } from "../features/posts/postSlice";
 export const Postform = () => {
   const [value, setValue] = useState("");
   const tokenval = useSelector((x) => x.account.token);
+  const buttonstatus = value.length > 0 && value.length < 301 ? false : true;
   const dispatch = useDispatch();
   const onSubmit = (event) => {
     event.preventDefault();
@@ -19,21 +20,22 @@ export const Postform = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="d-flex justify-content-center align-items-center flex-column"
+      className="d-flex justify-content-center align-items-center flex-column mt-4 font-family-sans-serif"
     >
-      <div className="">
+      <div className="compose-width">
         <textarea
           type="text"
-          className="form-control"
+          className="form-control font-family-sans-serif"
           placeholder="Say what's on your mind"
           value={value}
           onChange={(event) => setValue(event.target.value)}
+          style={{ minHeight: "10rem" }}
         />
       </div>
       <button
         type="submit"
         className="btn btn-primary mt-3"
-        disabled={value.length > 0 ? false : true}
+        disabled={buttonstatus}
       >
         Submit
       </button>

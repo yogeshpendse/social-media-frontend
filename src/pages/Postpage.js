@@ -60,10 +60,10 @@ export function Postpage() {
     //   handleShow
   }
   return (
-    <>
+    <div className="mt-3 d-flex justify-content-center">
       {data ? (
         <>
-          <div className="card">
+          <div className="card post-width">
             <h5 className="card-header">
               <Link to={`/${data.username}`} className="text-decoration-none">
                 <span className="text-dark">{data.name}</span>&nbsp;
@@ -82,9 +82,9 @@ export function Postpage() {
                     tokenval,
                   })
                 }
-                className="btn btn-primary btn-sm"
+                className="btn btn-sm"
               >
-                <i className="bi bi-heart-fill"></i>
+                <i className="bi bi-heart"></i>
               </span>
               &nbsp;
               <span
@@ -95,9 +95,9 @@ export function Postpage() {
                     tokenval,
                   })
                 }
-                className="btn btn-primary btn-sm"
+                className="btn btn-sm"
               >
-                <i className="bi bi-person-lines-fill"></i>
+                <i className="bi bi-person"></i>
               </span>
             </div>
           </div>
@@ -121,17 +121,6 @@ export function Postpage() {
         draggable
         pauseOnHover
       />
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-    </>
+    </div>
   );
 }

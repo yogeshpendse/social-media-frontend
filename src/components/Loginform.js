@@ -6,7 +6,8 @@ export function Loginform() {
   const [loginusername, setLoginusername] = useState("");
   const [loginpassword, setLoginpassword] = useState("");
   const dispatch = useDispatch();
-
+  const buttonstatus =
+    loginusername.length > 0 && loginpassword.length > 0 ? false : true;
   const onSubmit = (event) => {
     event.preventDefault();
     // console.log({ username: loginusername, password: loginpassword });
@@ -19,7 +20,7 @@ export function Loginform() {
       <br />
       <form
         onSubmit={onSubmit}
-        className="d-flex justify-content-center align-items-center flex-column"
+        className="d-flex justify-content-center align-items-center flex-column gap-3"
       >
         <input
           value={loginusername}
@@ -27,6 +28,7 @@ export function Loginform() {
           placeholder="username"
           required={true}
           type="text"
+          className="border border-none rounded-3 text-center"
         />
         <input
           value={loginpassword}
@@ -34,8 +36,13 @@ export function Loginform() {
           placeholder="password"
           required={true}
           type="password"
+          className="border border-none rounded-3 text-center"
         />
-        <button className="btn btn-primary btn-sm" type="submit">
+        <button
+          className="btn btn-primary btn-sm"
+          type="submit"
+          disabled={buttonstatus}
+        >
           login
         </button>
       </form>

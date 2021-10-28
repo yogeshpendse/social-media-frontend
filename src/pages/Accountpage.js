@@ -14,11 +14,11 @@ export function Accountpage() {
   // console.log({ token });
 
   return (
-    <div>
+    <div className="mt-5">
       {token !== "null" && token && <Account state={state} />}
       {token === "null" && (
         <>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center gap-3">
             <button
               className="btn btn-primary btn-sm"
               onClick={() => settoggle("login")}

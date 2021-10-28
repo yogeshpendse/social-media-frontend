@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export function Topnavbar() {
   const username = useSelector((state) => state.account.username);
   return (
-    <div>
-      <Navbar bg="light" expand="lg">
+    <div className="sticky-top font-family-sans-serif">
+      <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
-          <span className="navbar-brand">JS</span>
+          <span className="navbar-brand text-white">JS</span>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
@@ -17,7 +17,7 @@ export function Topnavbar() {
               >
                 <li className="nav-item">
                   <span className="nav-link active">
-                    <Link className="btn btn-light" to="/feed">
+                    <Link className="btn text-white" to="/">
                       feed
                     </Link>
                   </span>
@@ -25,7 +25,7 @@ export function Topnavbar() {
                 {username.length > 0 && (
                   <li className="nav-item">
                     <span className="nav-link active">
-                      <Link className="btn btn-light" to="/notification">
+                      <Link className="btn text-white" to="/notification">
                         notification
                       </Link>
                     </span>
@@ -34,7 +34,7 @@ export function Topnavbar() {
                 {username.length > 0 && (
                   <li className="nav-item">
                     <span className="nav-link active">
-                      <Link className="btn btn-light" to="/compose">
+                      <Link className="btn text-white" to="/compose">
                         compose
                       </Link>
                     </span>
@@ -43,7 +43,7 @@ export function Topnavbar() {
                 {username.length > 0 && (
                   <li className="nav-item">
                     <span className="nav-link active">
-                      <Link className="btn btn-light" to={`/${username}`}>
+                      <Link className="btn text-white" to={`/${username}`}>
                         profile
                       </Link>
                     </span>
@@ -51,7 +51,7 @@ export function Topnavbar() {
                 )}
                 <li className="nav-item">
                   <span className="nav-link active">
-                    <Link className="btn btn-light" to="/account">
+                    <Link className="btn text-white" to="/account">
                       account
                     </Link>
                   </span>
