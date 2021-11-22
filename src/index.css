@@ -1,0 +1,42 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+* {
+  font-family: sans-serif;
+}
+.txt-decoration-none {
+  text-decoration: none;
+}
+.font-family-sans-serif {
+  font-family: sans-serif;
+}
+.navbar-item {
+  color: white;
+}
+.post-width {
+  width: 95%;
+}
+.notification-width {
+  width: 95%;
+}
+.custom-background {
+  background-color: #dae0e6;
+}
+.compose-width {
+  width: 80%;
+}
+.min-height-compose {
+  min-height: 10px;
+}
+.border-none {
+  border: none;
+}
+@media screen and (min-width: 600px) {
+  .post-width {
+    width: 50%;
+  }
+  .notification-width {
+    width: 50%;
+  }
+  .compose-width {
+    width: 40%;
+  }
+}
