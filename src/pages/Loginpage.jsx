@@ -76,7 +76,7 @@ export function Loginpage() {
               {loginloader && <div className="loader-sm-light" />}
             </Button>
             <div className="mt-2">
-              <Link to="/register">Have an account?</Link>
+              <Link to="/register">Don't have an account?</Link>
             </div>
           </div>
         )}
