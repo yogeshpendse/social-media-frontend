@@ -67,7 +67,6 @@ export function Registerpage() {
             Password must include atleast one number, special character and
             capital letter.
           </li>
-          <li className="notice_item">iusdhf</li>
         </ul>
       </div>
     </>
