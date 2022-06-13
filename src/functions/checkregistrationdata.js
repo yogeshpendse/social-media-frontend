@@ -9,6 +9,5 @@ export function checkregistrationdata(username, password, name) {
       ? false
       : true;
 
-  console.log({ namebool, usernamebool, passwordbool });
   return finalbool;
 }

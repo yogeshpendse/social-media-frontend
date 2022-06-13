@@ -82,6 +82,7 @@ const accountSlice = createSlice({
       state.loginloader = true;
     },
     [setLoginAsync.rejected]: (state, action) => {
+      state.loginloader = false;
       toast.error(action.payload, {
         position: "top-right",
         autoClose: 2000,
