@@ -8,8 +8,8 @@ export function Loginpage() {
   const dispatch = useDispatch();
   const loginstatus = useSelector((state) => state.account.loginstatus);
   const loginloader = useSelector((state) => state.account.loginloader);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("testuser");
+  const [password, setPassword] = useState("Test@123");
   const usernamebool = username.length > 0 ? false : true;
   const passwordbool = password.length > 0 ? false : true;
   const finalstatus =
