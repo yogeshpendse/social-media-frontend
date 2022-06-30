@@ -42,11 +42,20 @@ export function Userposts(params) {
             return (
               <div
                 key={item._id}
-                className="card post-width mt-2 border rounded"
+                className="card post-width mt-2 border rounded post-border"
               >
                 <div className="card-body">
-                  <span className="card-title">{name}</span>&nbsp;
-                  <span>@{paramval.username}</span>
+                  <div className="card__bodytop">
+                    <img
+                      className="card__bodytopimage"
+                      src="https://t4.ftcdn.net/jpg/02/15/84/43/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg"
+                      alt="pimage"
+                    />
+                    <div>
+                      <span className="card-title">{name}</span>&nbsp;
+                      <span>@{paramval.username}</span>
+                    </div>
+                  </div>
                   <Link
                     to={`/post/${item.creator}_${item.postid}`}
                     className="text-decoration-none text-body"

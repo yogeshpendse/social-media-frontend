@@ -56,7 +56,15 @@ export function Userprofilepage() {
 
   return (
     <div>
-      {!userpostloader && <h1 className="text-center">{nameval}</h1>}&nbsp;
+      <div>
+        <img
+          src="https://t4.ftcdn.net/jpg/02/15/84/43/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg"
+          // className="rounded mx-auto d-block"
+          className="mx-auto d-block profilepage__image"
+          alt="profile"
+        />
+      </div>
+      {!userpostloader && <h1 className="text-center">{nameval}</h1>}
       <h5 className="text-center">@{paramval.username} </h5>
       {useridofpage !== myuserid && (
         <div className="d-flex justify-content-center">

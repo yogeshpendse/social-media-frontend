@@ -41,15 +41,25 @@ export function Homepage() {
       ) : (
         <div className="d-flex justify-content-center align-items-center flex-column">
           {[...posts].map((item) => (
-            <div key={item._id} className="card post-width mt-2 border rounded">
+            <div
+              key={item._id}
+              className="card post-width mt-2 border rounded post-border"
+            >
               <div className="card-body">
                 <h5 className="card-title">
                   <Link
                     to={`/${item.username}`}
-                    className="text-decoration-none text-dark"
+                    className="text-decoration-none text-dark card__bodytop"
                   >
-                    {item.name}&nbsp;
-                    <span className="teitemt-black-50">@{item.username}</span>
+                    <img
+                      className="card__bodytopimage"
+                      src="https://t4.ftcdn.net/jpg/02/15/84/43/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg"
+                      alt="pimage"
+                    />
+                    <div>
+                      {item.name}&nbsp;
+                      <span className="teitemt-black-50">@{item.username}</span>
+                    </div>
                   </Link>
                 </h5>
                 <Link

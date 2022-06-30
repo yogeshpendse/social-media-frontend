@@ -59,15 +59,25 @@ export function Postpage() {
         <Bigloader />
       ) : (
         <div className="mt-3 d-flex justify-content-center">
-          <div className="card post-width">
-            <h5 className="card-header">
-              <Link to={`/${data?.username}`} className="text-decoration-none">
-                <span className="text-dark">{data.name}</span>&nbsp;
-                <span className="text-secondary text-black-50">
-                  @{data.username}
-                </span>
+          <div className="card post-width post-border">
+            <div className="card-header">
+              <Link
+                to={`/${data?.username}`}
+                className="text-decoration-none card__bodytop"
+              >
+                <img
+                  className="card__bodytopimage"
+                  src="https://t4.ftcdn.net/jpg/02/15/84/43/240_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg"
+                  alt="pimage"
+                />
+                <div>
+                  <span className="text-dark">{data.name}</span>&nbsp;
+                  <span className="text-secondary text-black-50">
+                    @{data.username}
+                  </span>
+                </div>
               </Link>
-            </h5>
+            </div>
             <div className="card-body">
               <p className="card-text">{data?.postdata?.content}</p>
               <span

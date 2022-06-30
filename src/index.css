@@ -111,3 +111,24 @@
   position: sticky;
   top: 0;
 }
+/* #b2b2b2 */
+.card__bodytop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  gap: 0.5rem;
+}
+.card__bodytopimage {
+  width: 1.5625rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.1rem #b2b2b2;
+}
+.profilepage__image {
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.1rem #b2b2b2;
+  margin-top: 2rem;
+  width: 10rem;
+}
+.post-border {
+  box-shadow: 0 0 0 0.06rem #b2b2b2;
+}
