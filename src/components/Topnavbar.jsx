@@ -49,6 +49,15 @@ export function Topnavbar() {
                   </span>
                 </li>
               )}
+              {loginstatus && (
+                <li className="nav-item">
+                  <span className="nav-link active">
+                    <Link className="btn text-white" to="/search">
+                      search
+                    </Link>
+                  </span>
+                </li>
+              )}
 
               <li className="nav-item">
                 <span className="nav-link active">
@@ -64,3 +73,4 @@ export function Topnavbar() {
     </Navbar>
   );
 }
+// search
