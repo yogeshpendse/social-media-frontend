@@ -11,6 +11,7 @@ import { Postpage } from "./pages/Postpage";
 import { Profilepage } from "./pages/Profilepage";
 import { Topnavbar } from "./components/Topnavbar";
 import { Registerpage } from "./pages/Registerpage";
+import { Searchpage } from "./pages/Search";
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/search" element={<Searchpage />} />
         <Route
           path="/compose"
           element={

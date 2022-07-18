@@ -132,3 +132,16 @@
 .post-border {
   box-shadow: 0 0 0 0.06rem #b2b2b2;
 }
+.usersearch {
+  display: flex;
+  max-width: 20rem;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+.usersearch__btn {
+  height: min-content;
+  width: min-content;
+}
